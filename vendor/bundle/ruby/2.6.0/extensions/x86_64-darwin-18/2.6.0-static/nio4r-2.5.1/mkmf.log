@@ -1,0 +1,261 @@
+have_header: checking for unistd.h... -------------------- yes
+
+"clang -o conftest -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/ryosuke/.rbenv/versions/2.6.1/lib -L. -L/Users/ryosuke/.rbenv/versions/2.6.1/lib  -fstack-protector-strong     -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc   "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"clang -E -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <unistd.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/select.h... -------------------- yes
+
+"clang -E -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/select.h>
+/* end */
+
+--------------------
+
+have_type: checking for port_event_t in poll.h... -------------------- no
+
+"clang -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:9: error: unknown type name 'port_event_t'
+typedef port_event_t conftest_type;
+        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <poll.h>
+4: 
+5: /*top*/
+6: typedef port_event_t conftest_type;
+7: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_header: checking for sys/epoll.h... -------------------- no
+
+"clang -E -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'sys/epoll.h' file not found
+#include <sys/epoll.h>
+         ^~~~~~~~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/epoll.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/event.h... -------------------- yes
+
+"clang -E -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/event.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/queue.h... -------------------- yes
+
+"clang -E -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/queue.h>
+/* end */
+
+--------------------
+
+have_type: checking for port_event_t in port.h... -------------------- no
+
+"clang -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+In file included from conftest.c:3:
+/usr/local/include/port.h:32:8: error: unknown type name 'bool'
+extern bool pg_set_noblock(pgsocket sock);
+       ^
+/usr/local/include/port.h:33:8: error: unknown type name 'bool'
+extern bool pg_set_block(pgsocket sock);
+       ^
+/usr/local/include/port.h:37:8: error: unknown type name 'bool'
+extern bool has_drive_prefix(const char *filename);
+       ^
+/usr/local/include/port.h:46:8: error: unknown type name 'bool'
+extern bool path_contains_parent_reference(const char *path);
+       ^
+/usr/local/include/port.h:47:8: error: unknown type name 'bool'
+extern bool path_is_relative_and_below_cwd(const char *path);
+       ^
+/usr/local/include/port.h:48:8: error: unknown type name 'bool'
+extern bool path_is_prefix_of_path(const char *path1, const char *path2);
+       ^
+/usr/local/include/port.h:62:8: error: unknown type name 'bool'
+extern bool get_home_path(char *ret_path);
+       ^
+/usr/local/include/port.h:210:6: error: unknown type name 'bool'
+                          bool echo);
+                          ^
+/usr/local/include/port.h:263:8: error: unknown type name 'bool'
+extern bool rmtree(const char *path, bool rmtopdir);
+       ^
+/usr/local/include/port.h:263:38: error: unknown type name 'bool'
+extern bool rmtree(const char *path, bool rmtopdir);
+                                     ^
+/usr/local/include/port.h:402:15: error: expected parameter declarator
+extern size_t strlcat(char *dst, const char *src, size_t siz);
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:115:47: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:62: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:30:32: note: expanded from macro '_USE_FORTIFY_LEVEL'
+#    define _USE_FORTIFY_LEVEL 2
+                               ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:402:15: error: expected ')'
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:115:47: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:62: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:30:32: note: expanded from macro '_USE_FORTIFY_LEVEL'
+#    define _USE_FORTIFY_LEVEL 2
+                               ^
+/usr/local/include/port.h:402:15: note: to match this '('
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:115:47: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:53: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                    ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:402:15: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+extern size_t strlcat(char *dst, const char *src, size_t siz);
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:115:47: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:31: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                              ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:402:15: error: conflicting types for '__builtin___strlcat_chk'
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:115:3: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                ^
+/usr/local/include/port.h:402:15: note: '__builtin___strlcat_chk' is a builtin with type 'unsigned long (char *, const char *, unsigned long, unsigned long)'
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:115:3: note: expanded from macro 'strlcat'
+                __builtin___strlcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:406:15: error: expected parameter declarator
+extern size_t strlcpy(char *dst, const char *src, size_t siz);
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:108:47: note: expanded from macro 'strlcpy'
+                __builtin___strlcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:62: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:30:32: note: expanded from macro '_USE_FORTIFY_LEVEL'
+#    define _USE_FORTIFY_LEVEL 2
+                               ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:406:15: error: expected ')'
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:108:47: note: expanded from macro 'strlcpy'
+                __builtin___strlcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:62: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:30:32: note: expanded from macro '_USE_FORTIFY_LEVEL'
+#    define _USE_FORTIFY_LEVEL 2
+                               ^
+/usr/local/include/port.h:406:15: note: to match this '('
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:108:47: note: expanded from macro 'strlcpy'
+                __builtin___strlcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:53: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                    ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:406:15: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+extern size_t strlcpy(char *dst, const char *src, size_t siz);
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:108:47: note: expanded from macro 'strlcpy'
+                __builtin___strlcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_common.h:39:31: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                              ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:406:15: error: conflicting types for '__builtin___strlcpy_chk'
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:108:3: note: expanded from macro 'strlcpy'
+                __builtin___strlcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                ^
+/usr/local/include/port.h:406:15: note: '__builtin___strlcpy_chk' is a builtin with type 'unsigned long (char *, const char *, unsigned long, unsigned long)'
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/secure/_string.h:108:3: note: expanded from macro 'strlcpy'
+                __builtin___strlcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                ^
+In file included from conftest.c:3:
+/usr/local/include/port.h:451:59: error: unknown type name 'bool'
+extern int      pg_get_encoding_from_locale(const char *ctype, bool write_message);
+                                                               ^
+conftest.c:6:9: error: unknown type name 'port_event_t'
+typedef port_event_t conftest_type;
+        ^
+2 warnings and 18 errors generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <port.h>
+4: 
+5: /*top*/
+6: typedef port_event_t conftest_type;
+7: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_header: checking for sys/resource.h... -------------------- yes
+
+"clang -E -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/x86_64-darwin18 -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0/ruby/backward -I/Users/ryosuke/.rbenv/versions/2.6.1/include/ruby-2.6.0 -I. -I/Users/ryosuke/.rbenv/versions/2.6.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/resource.h>
+/* end */
+
+--------------------
+
